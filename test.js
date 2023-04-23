@@ -1,4 +1,4 @@
-function calHiBa(peso) {
+function calHidratacionBasal(peso) {
     if (peso >= 30) {
       let sc = ((peso * 4) + 7) / (peso + 90);
       let ra = sc * 1500;
@@ -7,7 +7,9 @@ function calHiBa(peso) {
       console.log(ra);
       console.log("Multiplicado por 2000:");
       console.log(rb);
-    } else {
+    }else if(peso <= 0 ){
+      console.log("No se puede calcular si es 0 o menor");
+    }else {
       if (peso <= 10) {
         let cc = peso * 100;
         console.log(cc);
@@ -22,3 +24,4 @@ function calHiBa(peso) {
       }
     }
 }
+

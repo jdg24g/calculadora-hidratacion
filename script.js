@@ -1,25 +1,35 @@
-function calcularHidratacion() {
-    var peso = parseInt(document.getElementById("inputPeso").value);
-
-    // Validar que se haya ingresado un número válido
-    if (isNaN(peso) || peso < 0) {
-      document.getElementById("resultado").innerHTML = "Ingrese un peso válido.";
-      return;
-    }
-
-    var cc;
+function calHidratacionBasal(peso) {
+  if (peso >= 30) {
+    let sc = (peso * 4 + 7) / (peso + 90);
+    let ra = sc * 1500;
+    let rb = sc * 2000;
+    console.log("Multiplicado por 1500:");
+    console.log(ra);
+    console.log("Multiplicado por 2000:");
+    console.log(rb);
+    return ra,rb
+  }else {
     if (peso <= 10) {
-      cc = peso * 100;
+      let cc = peso * 100;
+      console.log(cc);
+      return cc
     } else if (peso <= 20) {
-      cc = 1000 + (peso - 10) * 50;
+      let cc = 1000 + (peso - 10) * 50;
+      console.log(cc);
+      return cc
     } else if (peso < 30) {
-      cc = 1500 + (peso - 20) * 20;
+      let cc = 1500 + (peso - 20) * 20;
+      console.log(cc);
+      return cc
     } else {
-      document.getElementById("resultado").innerHTML = "YOU SHALL NOT PASS";
-      return;
+      console.log("YOU SHALL NOT PASS");
+      return cc
     }
-
-    // Mostrar el resultado
-    document.getElementById("resultado").innerHTML = cc;
   }
-  //luego agrego las otras funciones
+}
+const BOTON = document.getElementById("calcular");
+const ERR = document.getElementById("error");
+
+BOTON.addEventListener("click", () => {
+    
+})
