@@ -47,7 +47,7 @@ BOTON.addEventListener("click", () => {
     mm2 = flu * 1.5 ;
     console.log(mm2);
 
-    MAN.innerText= "m+m/2 "+Math.round(mm2)
+    MAN.innerText= "m+m/2: "+Math.round(mm2)
     FLU.innerText= Math.round(flu) + " cc/h"
     ERR.style.display = "none";
     MAN.style.display = "block";
