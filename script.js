@@ -25,21 +25,30 @@ const ERR = document.getElementById("error");
 let res = document.getElementById("yun");
 const FLU = document.getElementById("flu");
 const MAN = document.getElementById("man");
+const INPUT = document.getElementById("peso");
+
+INPUT.addEventListener('click', () => {
+  ERR.style.display = "none";
+  MAN.style.display = "none";
+  FLU.style.display = "none";
+  res.style.display = "none";
+})
 
 BOTON.addEventListener("click", () => {
-  const INPUT = document.getElementById("peso");
+  
   const PESO = INPUT.value;
   if (PESO > 0) {
     cpeso = +PESO;
-    res.innerText = " cc/día: " + calHidratacionBasal(cpeso);
+    res.innerText = " cc/día: " + Math.round(calHidratacionBasal(cpeso));
     flu = calHidratacionBasal(cpeso)
-    /*
-    solucionar este problema
-    mm2 = flu * 1,5 */
-    flu = flu/24
+    
+   
+    flu = flu/24;
+    mm2 = flu * 1.5 ;
+    console.log(mm2);
 
-    //MAN.innerText= mm2
-    FLU.innerText= flu + "cc/h"
+    MAN.innerText= "m+m/2 "+Math.round(mm2)
+    FLU.innerText= Math.round(flu) + " cc/h"
     ERR.style.display = "none";
     MAN.style.display = "block";
     FLU.style.display = "block";
