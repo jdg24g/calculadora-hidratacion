@@ -9,7 +9,7 @@ function calHidratacionBasal(peso) {
     let sc = (peso * 4 + 7) / (peso + 90);
     let ra = sc * 1500;
     let rb = sc * 2000;
-    return ra;
+    return rb;
   } else {
     if (peso <= 10) {
       let cc = peso * 100;
