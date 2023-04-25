@@ -9,9 +9,6 @@
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf; }
 
-*, *::before, *::after {
-  box-sizing: inherit; }
-
 body {
   font-family: "Montserrat", sans-serif;
   color: #3e363f;
@@ -75,6 +72,7 @@ input {
     rgba(255, 32, 152, 1) 0%,
     rgba(133, 64, 92, 1) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -150,4 +148,15 @@ button:active {
   color: var(--greyLight-3); }
 .form__input:focus {
   outline: none;
-  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white); }
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.mostrar{
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    rgba(255, 32, 152, 1) 0%,
+    rgba(133, 64, 92, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
