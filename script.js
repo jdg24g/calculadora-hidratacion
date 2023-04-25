@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+  var bgDiv = document.querySelector('.bg');
+  bgDiv.classList.remove('hidden');
+});
+
+
 function calHidratacionBasal(peso) {
   if (peso >= 30) {
     let sc = (peso * 4 + 7) / (peso + 90);
