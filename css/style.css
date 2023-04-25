@@ -25,6 +25,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  filter: blur(1px);
   z-index: -1;
 }
 
