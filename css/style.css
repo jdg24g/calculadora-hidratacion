@@ -56,6 +56,13 @@ input {
   appearance: none;
   margin: 0;
 }
+#inicio{
+    background: #121FCF;
+    background: radial-gradient(circle farthest-corner at center center, rgba(255,32,152,1) 0%, rgba(133,64,92,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
 
 button {
     margin-top: 15px;
@@ -63,8 +70,9 @@ button {
 	font-weight: bold;
 	padding: 12px 45px;
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
+	background: rgb(255,32,152);
+    background: radial-gradient(circle, rgba(255,32,152,1) 0%, rgba(133,64,92,1) 100%);
+	border: none;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -80,7 +88,8 @@ button {
 }
 
 #detalle{
-    background: #FF416C;
+    background: rgb(255,32,152);
+    background: radial-gradient(circle, rgba(255,32,152,1) 0%, rgba(133,64,92,1) 100%);
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
